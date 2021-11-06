@@ -35,7 +35,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: var(--main-color);
 }
 
 main{
@@ -112,14 +112,15 @@ main > p, footer > p{
     transition: 1s;
 }
 
-.cards{
+.cards, .cards_home{
     display: grid;
     grid-template-columns: 1fr;
     flex-wrap: wrap;
 }
 
+
 @media screen and (min-width: 450px) {
-    .cards{
+    .cards, .cards_home{
         display: grid;
         grid-template-columns: 1fr 1fr;
         flex-wrap: wrap;
