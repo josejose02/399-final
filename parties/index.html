@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="images/logo_icon.png">
+		
+        <link rel="stylesheet" href="../css/html5reset.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<title>Political Parties</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ol class="nav_items">
+					<li class="nav_item_main"><a href="/">Spanish Politics</a></li>
+					<li class="nav_item"><a href="/parties/">parties</a></li>
+					<li class="nav_item"><a href="/people/">party leaders</a></li>
+					<li class="nav_item"><a href="#">polls</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="page_title flex flex-center">
+				<h2>Political parties</h2>
+			</div>
+			<div class="cards">
+				<div class="card psoe">
+					<img src="../../media/psoe-1.png">
+					<div class="card_content">
+						<h3>Partido Socialista Obrero Español</h3>
+						<p></p>
+					</div>
+				</div>
+				<div class="card pp">
+					<img src="../../media/pp-1.png">
+					<div class="card_content">
+						<h3>Partido Popular</h3>
+						<p>President of PP</p>
+					</div>
+				</div>
+				<div class="card vox">
+					<img src="../../media/vox-1.png">
+					<div class="card_content">
+						<h3>Vox</h3>
+						<p>President of Vox</p>
+					</div>
+				</div>
+				<div class="card podemos">
+					<img src="../../media/podemos-1.png">
+					<div class="card_content">
+						<h3>Podemos</h3>
+						<p>Secretary general of Podemos</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p>Made by José David Vázquez for SI339</p>
+		</footer>
+		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("scroll_message").style.visibility = "visible";
+			} else {
+				document.getElementById("scroll_message").style.visibility = "hidden";
+			}
+			prevScrollpos = currentScrollPos;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,201 @@
+:root{
+    --base-font-family: 'IBM Plex Sans', Arial, Sans-Serif;
+    --main-color: #F4F1D0;
+    --white: #fafafa;
+
+    --light-dark: #343434;
+    --dark: #191919;
+    --black: #010101;
+
+    --psoe: #E30613;
+    --pp: #0056A3;
+    --vox: #5AC035;
+    --podemos: #6F4888;
+    --erc: #FCC34E;
+    --ciudadanos: #FF4F00;
+    --pnv: #228B22;
+    --bildu: #93CD12;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark);
+    font-family: 'IBM Plex Sans', Arial, Sans-Serif;
+    color: var(--main-color);
+    font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main{
+}
+
+main > img{
+    width: 100%;
+}
+
+header{
+    position: sticky;
+    background-color: black;
+    top: 0;
+    z-index: 1;
+}
+
+.nav_items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav_items > li:first-child{
+    margin-right: auto;
+}
+
+.nav_item_main{
+    margin: 1rem;
+}
+
+.nav_item_main > a{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.nav_item{
+    margin: 1rem .7rem 1rem 0;
+}
+
+.nav_item > a, .nav_item_main > a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    margin: 0.5rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.main_title, .page_title{
+    height: calc(100vh - 7rem);
+    margin: 1rem;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+    font-size: 2rem;
+}
+
+.page_title{
+    height: calc(32vh - 7rem);
+}
+
+main > p, footer > p{
+    text-align: center;
+    font-style: italic;
+    transform: scale(0.9);
+    transition: 1s;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 450px) {
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-wrap: wrap;
+    }
+}
+
+.card{
+    text-decoration: inherit;
+    background-color: var(--light-dark);
+    margin: 1rem;
+    transform: scale(1);
+    transition: 1s;
+}
+
+.big{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: 1s;
+}
+
+.card > img{
+    width: 100%;
+}
+
+.card_content{
+    margin: 1rem;
+}
+
+.card_content > h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card_content > h3, .card_content > p{
+    color: var(--main-color);
+    text-decoration: none;
+    margin: 0;
+}
+
+.psoe{
+    
+}
+
+footer{
+    margin-top: 2rem;
+    height: 5rem;
+    background-color: black;
+    color: #dcdcdc;
+}
+
+footer > p {
+    padding-top: 2rem;
+}
+
+
+
+

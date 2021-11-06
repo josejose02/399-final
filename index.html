@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="images/logo_icon.png">
+		<link rel="stylesheet" href="css/html5reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Spanish Politics</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ol class="nav_items">
+					<li class="nav_item_main"><a href="/">Spanish Politics</a></li>
+					<li class="nav_item"><a href="parties/">parties</a></li>
+					<li class="nav_item"><a href="people/">party leaders</a></li>
+					<li class="nav_item"><a href="#">polls</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="main_title flex flex-center">
+				<h2>Spain's politics are exciting and equally frustrating. Let this guide be a door into madness.</h2>
+			</div>
+			<p id="scroll_message">scroll down to continue</p>
+			<div class="cards">
+				<a href="/parties/" class="card big">
+					<div class="card_content">
+						<h3>Parties</h3>
+					</div>
+				</a>
+				<a href="/people/" class="card big">
+					<div class="card_content">
+						<h3>People</h3>
+					</div>
+				</a>
+			</div>
+		</main>
+		<footer>
+			<p>Made by José David Vázquez for SI339</p>
+		</footer>
+		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("scroll_message").style.visibility = "visible";
+			} else {
+				document.getElementById("scroll_message").style.visibility = "hidden";
+			}
+			prevScrollpos = currentScrollPos;
+			}
+		</script>
+	</body>
+</html>
