@@ -31,9 +31,24 @@ body{
     color: var(--dark);
 }
 
-.skip-to-content-link{
-    
+.skip-to-content{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+
+.skip-to-content-link{
+    display: none;
+    padding: 0.5rem;
+}
+
+.skip-to-content:focus .skip-to-content-link{
+    display: block;
+    background-color: var(--main-color);
+    color: var(--light-dark);
+    animation: ;
+}
+
 
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -254,7 +269,7 @@ main > p, footer > p{
   /* The image used */
 
   /* Set a specific height */
-  min-height: 500px;
+  height: 76vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -270,7 +285,7 @@ main > p, footer > p{
     }
 
     .c_container{
-        padding: 0 10vw 0 10vw;
+        mar: 0 10vw 0 10vw;
     }
 
     .nav_item_active{
@@ -278,6 +293,7 @@ main > p, footer > p{
     }
 
     .dots{
+        padding: 0 5rem 0 5rem;
         margin-left: auto;
     }
 
