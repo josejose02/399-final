@@ -1,0 +1,14 @@
+{
+    "dataset_name": "spanish politicians",
+    "last_update_date": "today",
+    "data": {
+        "Pedro Sanchez":{
+            "party": "PSOE",
+            "points": 10
+        },
+        "Pablo Casado":{
+            "party": "PP",
+            "points": 7
+        }
+    }
+}

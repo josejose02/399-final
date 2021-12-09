@@ -3,6 +3,7 @@
     --main-color: #F4F1D0;
     --white: #fafafa;
 
+    --grey: #dddddd;
     --light-dark: #343434;
     --dark: #191919;
     --black: #010101;
@@ -26,6 +27,14 @@ body{
     font-size: 16px;
 }
 
+.dark_text{
+    color: var(--dark);
+}
+
+.skip-to-content-link{
+    
+}
+
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -46,24 +55,21 @@ main > img{
 }
 
 header{
-    position: sticky;
     background-color: black;
     top: 0;
     z-index: 1;
 }
 
+
 .nav_items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
-}
-
-.nav_items > li:first-child{
-    margin-right: auto;
 }
 
 .nav_item_main{
     margin: 1rem;
+    margin-right: auto;
 }
 
 .nav_item_main > a{
@@ -72,16 +78,19 @@ header{
 }
 
 .nav_item{
-    margin: 1rem .5rem 1rem 0.5rem;
+    text-align: center;
+    padding: 1rem .5rem 1rem 0.5rem;
+    margin-left: -3px;
+    border: var(--main-color) 3px;
 }
 
-.nav_item > a, .nav_item_main > a{
+.nav_item, .nav_item_main {
     color: white;
     text-decoration: none;
 }
 
 .nav_item_active{
-    margin: 0;
+    margin-bottom: -5px;
     padding: 1rem .5rem 1rem 0.5rem;
     background-color: var(--main-color);
     color: var(--black);
@@ -123,37 +132,164 @@ main > p, footer > p{
     transition: 1s;
 }
 
+
 .cards, .cards_home{
     display: grid;
     grid-template-columns: 1fr;
+}
+
+/* DOTS & Congress */
+.c_title{
+    margin: 1rem 0 1rem 0;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    background-color: var(--black);
+}
+
+.winning{
+    width: 100px;
+}
+
+.c_title_h1{
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: 10;
+    font-style: italic;
+    align-self: center;
+}
+
+.c_title_h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    font-weight: 10;
+}
+
+.dots{
+    margin-left: auto;
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dots_key{
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    margin-bottom: 1rem;
+}
+
+.dots_key > p{
+    margin-top: 0.3rem;
+}
+
+.bar{
+    width: calc(100% * (var(--l)/120));
+    margin-top: 0.3rem;
+    overflow: visible;
+}
+
+.bar > span{
+    font-style: italic;
+    font-weight: bold;
 }
 
 
-@media screen and (min-width: 450px) {
-    .cards, .cards_home{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        flex-wrap: wrap;
-    }
-
-    .profile-page{
-        display: grid;
-        grid-template-columns: 1fr 9fr 1fr;
-    }
-    
-    article, main > img{
-        grid-column: 2;
-    }
-
-    main > img{
-        padding: 1rem 3rem 1rem 3rem;
-    }
+.dot{
+    width: 17px;
+    height: 17px;
+    border-radius: 10px;
+    margin: 0.15rem;
 }
 
-@media screen and (min-width: 820px) {
+.psoe{
+    background-color: var(--psoe);
+}
+
+.pp{
+    background-color: var(--pp);
+}
+
+.vox{
+    background-color: var(--vox);
+}
+
+.podemos{
+    background-color: var(--podemos);
+}
+
+.erc{
+    background-color: var(--erc);
+}
+
+.ciudadanos{
+    background-color: var(--ciudadanos);
+}
+
+.pnv{
+    background-color: var(--pnv);
+}
+
+.bildu{
+    background-color: var(--bildu);
+}
+
+.otros{
+    background-color: var(--main-color);
+}
+
+.hovered{}
+
+.c_container{
+    background-color: none;
+}
+
+.c_img_1{
+    background-image: url("../media/congreso.jpg");
+}
+
+.c_img_2{
+    background-image: url("../media/congreso-2.jpg");
+}
+.p_img{
+  /* The image used */
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@media screen and (min-width: 600px) {
+    header{
+        position: sticky;
+    }
+
+    .c_container{
+        padding: 0 10vw 0 10vw;
+    }
+
+    .nav_item_active{
+        margin-bottom: -5px;
+    }
+
+    .dots{
+        margin-left: auto;
+    }
+
+    .dots_key{
+        grid-template-columns: 3fr 10fr;
+    }
+
+    .nav_items {
+        flex-direction: row;
+    }
+
     .cards{
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         flex-wrap: wrap;
     }
@@ -167,13 +303,26 @@ main > p, footer > p{
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .cards{
+@media screen and (min-width: 768px) {
+    .container{
+        padding: 0 15vw 0 15vw;
+    }
+
+    .c_container{
+        padding: 0 15vw 0 15vw;
+    }
+
+    .dots_key{
         display: grid;
+        grid-template-columns: 3fr 15fr;
+        margin-bottom: 1rem;
+    }
+
+    .cards{
         grid-template-columns: repeat(4, 1fr);
-        flex-wrap: wrap;
     }
 }
+
 
 .card{
     text-decoration: inherit;
@@ -224,9 +373,9 @@ main > p, footer > p{
 }   
 
 
-article{
+/* article{
     margin: 0 1rem 0 1rem;
-}
+} */
 
 footer{
     margin-top: 2rem;
