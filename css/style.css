@@ -62,12 +62,8 @@ body::-webkit-scrollbar-thumb {
   background: var(--main-color);
 }
 
-main{
-}
 
-main > img{
-    width: 100%;
-}
+
 
 header{
     background-color: black;
@@ -115,9 +111,6 @@ header{
     color: var(--black);
 }
 
-main{
-    margin: 0.5rem;
-}
 
 .flex{
     display: flex;
