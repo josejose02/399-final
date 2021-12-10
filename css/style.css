@@ -14,7 +14,7 @@
     --podemos: #6F4888;
     --erc: #FCC34E;
     --ciudadanos: #FF4F00;
-    --pnv: #228B22;
+    --pnv: #186218;
     --bildu: #93CD12;
 }
 
@@ -27,14 +27,49 @@ body{
     font-size: 16px;
 }
 
+
+.psoe{
+    background-color: var(--psoe);
+}
+
+.pp{
+    background-color: var(--pp);
+}
+
+.vox{
+    background-color: var(--vox);
+}
+
+.podemos{
+    background-color: var(--podemos);
+}
+
+.erc{
+    background-color: var(--erc);
+}
+
+.ciudadanos{
+    background-color: var(--ciudadanos);
+}
+
+.pnv{
+    background-color: var(--pnv);
+}
+
+.bildu{
+    background-color: var(--bildu);
+}
+
 .dark_text{
     color: var(--dark);
 }
 
+.white_back{
+    background-color: var(--white);
+}
+
 .skip-to-content{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    margin: auto;    
 }
 
 .skip-to-content-link{
@@ -46,7 +81,6 @@ body{
     display: block;
     background-color: var(--main-color);
     color: var(--light-dark);
-    animation: ;
 }
 
 
@@ -140,11 +174,59 @@ main > p, footer > p{
     transition: 1s;
 }
 
+/* CARDS */
 
 .cards, .cards_home{
     display: grid;
     grid-template-columns: 1fr;
 }
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
 
 /* DOTS & Congress */
 .c_title{
@@ -209,41 +291,18 @@ main > p, footer > p{
     margin: 0.15rem;
 }
 
-.psoe{
-    background-color: var(--psoe);
-}
-
-.pp{
-    background-color: var(--pp);
-}
-
-.vox{
-    background-color: var(--vox);
-}
-
-.podemos{
-    background-color: var(--podemos);
-}
-
-.erc{
-    background-color: var(--erc);
-}
-
-.ciudadanos{
-    background-color: var(--ciudadanos);
-}
-
-.pnv{
-    background-color: var(--pnv);
-}
-
-.bildu{
-    background-color: var(--bildu);
-}
-
 .otros{
     background-color: var(--main-color);
 }
+
+.card{
+    text-decoration: inherit;
+    background-color: var(--light-dark);
+    margin: 1rem;
+    transform: scale(1);
+    transition: 1s;
+}
+
 
 .hovered{}
 
@@ -270,6 +329,16 @@ main > p, footer > p{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (prefers-reduced-motion) {
+    .p_img {
+        background-attachment: initial;
+        background-position: initial;
+        background-repeat: initial;
+        background-size: initial;
+    }
+
+  }
 
 
 @media screen and (min-width: 600px) {
@@ -300,7 +369,6 @@ main > p, footer > p{
 
     .cards{
         grid-template-columns: repeat(3, 1fr);
-        flex-wrap: wrap;
     }
 
     .card{
@@ -313,11 +381,7 @@ main > p, footer > p{
 }
 
 @media screen and (min-width: 768px) {
-    .container{
-        padding: 0 15vw 0 15vw;
-    }
-
-    .c_container{
+    .container, .c_container{
         padding: 0 15vw 0 15vw;
     }
 
@@ -333,13 +397,6 @@ main > p, footer > p{
 }
 
 
-.card{
-    text-decoration: inherit;
-    background-color: var(--light-dark);
-    margin: 1rem;
-    transform: scale(1);
-    transition: 1s;
-}
 
 .big{
     height: 250px;
